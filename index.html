@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Webpage</title>
+</head>
+<body>
+    <div class="Container">
+        <header>
+            <div class="Logo">
+                <a href="index.html"> mamon <span>dots</span></a>
+            </div>
+            <div class="Menu">
+                <ul>
+                    <li> <a href=""> Home </a></li>
+                    <li> <a href=""> For Business </a></li>
+                    <li> <a href=""> For Freelancers </a></li>
+                    <li> <a href=""> Use Cases</a></li>
+                    <li> <a href=""> fQA</a></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <a href=""> Join Now </a>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content-info">
+                <h1> Best Payment <br> Experience </h1>
+                <p> The output of the VulDeePecker.py script will provide information about the <br> analysis process and the results of vulnerability detection. 
+                    Here is a <br> breakdown of the expected output: 
+                    <br>1. Collecting gadgets:
+                    <br>- This progress update indicates the script is parsing the C++ code file and <br>extracting individual gadgets.
+                    <br>- It will display the count of collected gadgets as it progresses.
+                    <br>2. Found forward slices and backward slices:
+                    <br>- This line indicates the number of forward and backward slices found in the <br> gadgets.
+                    <br>- It provides information about the distribution of gadgets based on their <br>vulnerability indicator.
+                </p>
+                <div class="content-btn">
+                    <button class="btn-01">Join Now</button>
+                    <button class="btn-02">Watch a Demo</button>
+                </div>
+                <div class="infoList">
+                    <ul>
+                        <li> Free 14-day trial </li>
+                        <li> No credit card required </li>
+                        <li> Cancel anytime </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="img-content">
+                <div class="main-img img1">
+                    <img src="Image/WhatsApp Image 2023-04-24 at 7.26.56 AM.jpeg">
+                </div>
+                <div class="main-img img2">
+                    <img src="Image/ABI RRR.JPG">
+                </div>
+                <div class="main-img img3">
+                    <img src="Image/ABI RRR - Copy.JPG">
+                </div>
+                <div class="main-img img4">
+                    <img src="Image/Bone2.JPG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="prometionVideo">
+        <div class="videoPage">
+            <video src="Video/343137102_613531617468936_6910298233059200274_n.mp4" controls></video>
+        </div>
+        <div class="closeVideo">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>-->
+    <div id="videoContainer" style="display: none;">
+  <video id="tutorialVideo" width="640" height="360" controls>
+    <source src="Video/343137102_613531617468936_6910298233059200274_n.mp4" type="video/mp4">
+    <!-- Add alternative video formats here -->
+  </video>
+</div>
+
+<button id="playButton">Click to Watch Tutorial</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const ConPlayBtn = document.querySelector('.btn-02');
+        const prometionVideo= document.querySelector('.prometionVideo');
+        const closeVideo = document.querySelector('.closeVideo');
+
+        ConPlayBtn.addEventListener('click',function(){
+            prometionVideo.classList.add('active');
+        });
+        closeVideo.addEventListener('click',function(){
+            prometionVideo.classList.remove('active');
+        });
+        let animation = anime({
+            targets:'header',
+            translateY:[-80,0],
+            opacity:[0,1],
+            duration:[800],
+            easing:'easeInOutSine',
+        });
+        anime({
+            targets:'.content-info h1',
+            translateX:[50,0],
+            opacity:[0,1],
+            duration:[800],
+            easing:'easeInOutSine',
+            delay: 300,
+        });
+        anime({
+            targets:'.content-info p',
+            translateX:[-50,0],
+            opacity:[0,1],
+            duration:[800],
+            easing:'easeInOutSine',
+            delay: 500,
+        });
+        anime({
+            targets:'.content-info .content-btn',
+            translateY:[-50,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 500,
+        });
+        anime({
+            targets:'.content-info .infoList',
+            translateX:[-50,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 800,
+        });
+        anime({
+            targets:'.img-content .img1',
+            translateX:[100,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 900,
+        });
+        anime({
+            targets:'.img-content .img2',
+            translateX:[60,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 1200,
+        });
+        anime({
+            targets:'.img-content .img3',
+            translateX:[-60,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 1200,
+        });
+        anime({
+            targets:'.img-content .img4',
+            translateY:[60,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 1500,
+        });
+        anime({
+            targets:'.prometionVideo .videoPage',
+            translateY:[60,0],
+            opacity:[0,1],
+            duration:[700],
+            easing:'easeInOutSine',
+            delay: 500,
+        });
+    </script>
+</body>
+</html>
